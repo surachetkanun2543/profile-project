@@ -28,7 +28,7 @@
     </div>
     <div class="mx-auto py-40 ">
       <img class=" rounded-full mx-auto  h-80 w-70 "
-        src="https://scontent.fbkk22-2.fna.fbcdn.net/v/t39.30808-6/331540936_1308524926391191_331525347992236187_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=174925&_nc_eui2=AeGZOfcEEjOU-qTME0fL2hWYKfxZOHZbQFcp_Fk4dltAV3cUu2Dwr3QDvbZB3cWkFB4Qm5pPXgaS605ymInXWrhF&_nc_ohc=JGXXyZ-cXPUAX8iL_hz&_nc_zt=23&_nc_ht=scontent.fbkk22-2.fna&oh=00_AfBIvsKfMjoTz00dm222xFEj5dc-fq-CgbH7ghXvxy2Diw&oe=64C14BAD"
+        src="https://scontent.fbkk22-4.fna.fbcdn.net/v/t39.30808-6/339419789_1407383000048480_8697727444594485924_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEYqUGCMJh1W53dRKjF-spQRzx1-ve8NmFHPHX697w2YZZDTY7tRj02gyFyViAMrj9GXfEG7DDGHeoQCG4GvQIv&_nc_ohc=3f3sYAB3NEAAX_gM-35&_nc_zt=23&_nc_ht=scontent.fbkk22-4.fna&oh=00_AfC7wKsJWHyNxoiI_voaY2Xb69giWL5SD5EcDH8H_ZBp6A&oe=64C79932"
         alt="image profile">
 
       <div class="mx-auto max-w-2xl py-40 ">
