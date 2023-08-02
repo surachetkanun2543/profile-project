@@ -39,7 +39,7 @@
           <article v-for="post in posts" :key="post.id" class="flex max-w-xl flex-col items-start justify-between">
 
             <img
-              class="h-48  transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0 mb-3"
+              class="h-48  transition-all duration-300 rounded-lg cursor-pointer  hover:grayscale-0 mb-3"
               :src="post.author.imageUrl" alt="image description">
 
             <div class="flex items-center gap-x-4 text-xs mt-4">
@@ -78,7 +78,7 @@
 const posts = [
   {
     id: 1,
-    title: 'โรงเรียนม่สงสามสิบอัมพวันวิทยา',
+    title: 'โรงเรียนม่วงสามสิบอัมพวันวิทยา',
     href: '#',
     description:
                 'เรียนในระดับมัธยมศึกษาตอนต้น ที่โรงเรียนม่วงสามสิบอัมพวันวิทยา โรงเรียนประจำอำเภอ',
@@ -98,7 +98,7 @@ const posts = [
     title: 'โรงเรียนม่วงสามสิบอัมพวันวิทยา',
     href: '#',
     description:
-                'เรียนในระดับมัธยมศึกษาตอนปลาย ที่โรงเรียนม่วงสามสิบอัมพวันวิทยา โรงเรียนประจำอำเภอ',
+                'เรียนในระดับมัธยมศึกษาตอนปลาย ที่โรงเรียนม่วงสามสิบอัมพวันวิทยา โรงเรียนประจำอำเภอ สายวิทย์-คณิต',
     date: 'มกราคม 2556',
     enddate: 'เมษยน 2559',
     datetime: '2020-03-16',

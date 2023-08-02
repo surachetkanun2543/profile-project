@@ -17,7 +17,7 @@
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         </div>
-      </nav> 
+      </nav>
     </header>
 
     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
@@ -26,34 +26,141 @@
         style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
       </div>
     </div>
-    <div class="mx-auto py-40 ">
-      <img class=" rounded-full mx-auto  h-50 w-60 "
-        src="https://scontent.fbkk2-3.fna.fbcdn.net/v/t39.30808-6/339419789_1407383000048480_8697727444594485924_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEYqUGCMJh1W53dRKjF-spQRzx1-ve8NmFHPHX697w2YZZDTY7tRj02gyFyViAMrj9GXfEG7DDGHeoQCG4GvQIv&_nc_ohc=p_tRkH3r550AX-2GGGZ&_nc_zt=23&_nc_ht=scontent.fbkk2-3.fna&oh=00_AfDDCVXONZtigr7LuMKwThBOg5n1mhMpYbt001wuFjTFVw&oe=64CF8232"
-        alt="image profile">
+    <div class=" py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0">
+          <h2
+            class="bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-violet-900  font-bold tracking-tight sm:text-4xl">
+            Academic experience</h2>
+          <p class="mt-2 text-lg leading-8 text-gray-600">ประสบการณ์ระหว่างเรียน</p>
+        </div>
+        <div
+          class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <article v-for="post in posts" :key="post.id" class="flex max-w-xl flex-col items-start justify-between">
 
-      <div class="mx-auto max-w-2xl py-40 ">
-        <div class="text-center">
-          <h1
-            class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-4xl font-bold tracking-tight text-grwhiteay-900 sm:text-6xl">
-            Surachet Kanun
-          </h1>
-          <p
-            class="mt-6 text-lg leading-8 text-white-600 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-            "" Change is an inevitable part of life, and it should be embraced rather than feared. It opens doors to
-            new
-            possibilities and unexplored horizons, fostering growth and transformation. Embracing change with an open
-            mind
-            and a courageous spirit can lead us to places we never thought possible. ""</p>
+            <img
+              class="h-48  transition-all duration-300 rounded-lg cursor-pointer  hover:grayscale-0 mb-3"
+              :src="post.author.imageUrl" alt="image description">
+
+            <div class="flex items-center gap-x-4 text-xs mt-4">
+              <time :datetime="post.datetime" class="text-gray-500">{{ post.date }}</time>-
+              <time :enddate="post.enddate" class="text-gray-500">{{ post.enddate }}</time>
+            </div>
+            <div class="group relative">
+              <h2 class="mt-3 text-lg font-semibold leading-7 text-gray-900 group-hover:text-gray-600">
+                <a :href="post.href">
+                  <span class="absolute inset-0" />
+                  {{ post.title }}
+                </a>
+              </h2>
+              <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{{ post.description }}</p>
+            </div>
+            <div class="relative mt-8 flex items-center gap-x-4">
+              <!-- <img :src="post.author.imageUrl" alt="" class="h-10 w-10 rounded-full bg-gray-50" /> -->
+              <div class="text-sm leading-6">
+                <p class="font-semibold text-gray-900">
+                  <a :href="post.author.href">
+                    <span class="absolute inset-0" />
+                    {{ post.author.name }}
+                  </a>
+                </p>
+                <p class="text-gray-600">{{ post.author.role }}</p>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </div>
   </div>
-  <div
-    class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-    aria-hidden="true">
-    <div
-      class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-      style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-    </div>
-  </div>
 </template>
+
+<script setup>
+const posts = [
+  {
+    id: 1,
+    title: 'โรงเรียนม่วงสามสิบอัมพวันวิทยา',
+    href: '#',
+    description:
+                'เรียนในระดับมัธยมศึกษาตอนต้น ที่โรงเรียนม่วงสามสิบอัมพวันวิทยา โรงเรียนประจำอำเภอ',
+    date: 'มกราคม 2556',
+    enddate: 'เมษยน 2559',
+    datetime: '2020-03-16',
+    author: {
+      name: 'GPA',
+      role: '3.00',
+      href: '#',
+      imageUrl:
+        'https://data.bopp-obec.info/emis/pic_school/1034711140.jpg',
+    },
+  },
+  {
+    id: 2,
+    title: 'โรงเรียนม่วงสามสิบอัมพวันวิทยา',
+    href: '#',
+    description:
+                'เรียนในระดับมัธยมศึกษาตอนปลาย ที่โรงเรียนม่วงสามสิบอัมพวันวิทยา โรงเรียนประจำอำเภอ สายวิทย์-คณิต',
+    date: 'มกราคม 2556',
+    enddate: 'เมษยน 2559',
+    datetime: '2020-03-16',
+    author: {
+      name: 'GPA',
+      role: '3.00',
+      href: '#',
+      imageUrl:
+        'https://data.bopp-obec.info/emis/pic_school/1034711140.jpg',
+    },
+  },
+  {
+    id: 3,
+    title: 'Mahasarakham University',
+    href: '#',
+    description:
+                'Bachelor of Science (Information technology) มหาวิิทยาลัยมหาสารคาม Mahasarakham University (MSU) ',
+    date: 'มกราคม 2556',
+    enddate: 'เมษยน 2559',
+    datetime: '2020-03-16',
+    author: {
+      name: 'GPA',
+      role: '3.19',
+      href: '#',
+      imageUrl:
+        'https://upload.wikimedia.org/wikipedia/th/thumb/7/7a/%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%93%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%B3%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B2%E0%B8%A1.svg/230px-%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%93%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%B3%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B2%E0%B8%A1.svg.png',
+    },
+  },
+  {
+    id: 4,
+    title: 'Mahasarakham University',
+    href: '#',
+    description:
+                'Bachelor of Science (Information technology) มหาวิิทยาลัยมหาสารคาม Mahasarakham University (MSU) ',
+    date: 'มกราคม 2556',
+    enddate: 'เมษยน 2559',
+    datetime: '2020-03-16',
+    author: {
+      name: 'GPA',
+      role: '3.19',
+      href: '#',
+      imageUrl:
+        'https://upload.wikimedia.org/wikipedia/th/thumb/7/7a/%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%93%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%B3%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B2%E0%B8%A1.svg/230px-%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%93%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%B3%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B2%E0%B8%A1.svg.png',
+    },
+  },
+  {
+    id: 5,
+    title: 'Mahasarakham University',
+    href: '#',
+    description:
+                'Bachelor of Science (Information technology) มหาวิิทยาลัยมหาสารคาม Mahasarakham University (MSU) ',
+    date: 'มกราคม 2556',
+    enddate: 'เมษยน 2559',
+    datetime: '2020-03-16',
+    author: {
+      name: 'GPA',
+      role: '3.19',
+      href: '#',
+      imageUrl:
+        'https://upload.wikimedia.org/wikipedia/th/thumb/7/7a/%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%93%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%B3%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B2%E0%B8%A1.svg/230px-%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%93%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%B3%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B2%E0%B8%A1.svg.png',
+    },
+  },
+  // More posts...
+]
+</script>
