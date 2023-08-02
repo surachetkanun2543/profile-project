@@ -95,7 +95,7 @@ const posts = [
   },
   {
     id: 2,
-    title: 'Boost your conversion rate',
+    title: 'โรงเรียนม่วงสามสิบอัมพวันวิทยา',
     href: '#',
     description:
                 'เรียนในระดับมัธยมศึกษาตอนปลาย ที่โรงเรียนม่วงสามสิบอัมพวันวิทยา โรงเรียนประจำอำเภอ',
@@ -112,10 +112,10 @@ const posts = [
   },
   {
     id: 3,
-    title: 'Boost your conversion rate',
+    title: 'Mahasarakham University',
     href: '#',
     description:
-                'เรียนในระดับปริญญาตรี Bachelor of Science (Information technology) มหาวิิทยาลัยมหาสารคาม Mahasarakham University (MSU) ',
+                'Bachelor of Science (Information technology) มหาวิิทยาลัยมหาสารคาม Mahasarakham University (MSU) ',
     date: 'มกราคม 2556',
     enddate: 'เมษยน 2559',
     datetime: '2020-03-16',
