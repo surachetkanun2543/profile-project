@@ -42,11 +42,9 @@
               class="h-48  transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0 mb-3"
               :src="post.author.imageUrl" alt="image description">
 
-            <div class="flex items-center gap-x-4 text-xs ">
-              <time :datetime="post.datetime" class="text-gray-500">{{ post.date }}</time>
-              <a :href="post.category.href"
-                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
-                {{ post.category.title }}</a>
+            <div class="flex items-center gap-x-4 text-xs mt-4">
+              <time :datetime="post.datetime" class="text-gray-500">{{ post.date }}</time>-
+              <time :enddate="post.enddate" class="text-gray-500">{{ post.enddate }}</time>
             </div>
             <div class="group relative">
               <h2 class="mt-3 text-lg font-semibold leading-7 text-gray-900 group-hover:text-gray-600">
@@ -83,13 +81,13 @@ const posts = [
     title: 'โรงเรียนม่สงสามสิบอัมพวันวิทยา',
     href: '#',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Mar 16, 2020',
+                'เรียนในระดับมัธยมศึกษาตอนต้น ที่โรงเรียนม่วงสามสิบอัมพวันวิทยา โรงเรียนประจำอำเภอ',
+    date: 'มกราคม 2556',
+    enddate: 'เมษยน 2559',
     datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
     author: {
-      name: 'Michael Foster',
-      role: 'Co-Founder / CTO',
+      name: 'GPA',
+      role: '3.00',
       href: '#',
       imageUrl:
         'https://data.bopp-obec.info/emis/pic_school/1034711140.jpg',
@@ -100,16 +98,16 @@ const posts = [
     title: 'Boost your conversion rate',
     href: '#',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Mar 16, 2020',
+                'เรียนในระดับมัธยมศึกษาตอนปลาย ที่โรงเรียนม่วงสามสิบอัมพวันวิทยา โรงเรียนประจำอำเภอ',
+    date: 'มกราคม 2556',
+    enddate: 'เมษยน 2559',
     datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
     author: {
-      name: 'Michael Foster',
-      role: 'CTO',
+      name: 'GPA',
+      role: '3.00',
       href: '#',
       imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        'https://data.bopp-obec.info/emis/pic_school/1034711140.jpg',
     },
   },
   {
@@ -117,16 +115,16 @@ const posts = [
     title: 'Boost your conversion rate',
     href: '#',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Mar 16, 2020',
+                'เรียนในระดับปริญญาตรี Bachelor of Science (Information technology) มหาวิิทยาลัยมหาสารคาม Mahasarakham University (MSU) ',
+    date: 'มกราคม 2556',
+    enddate: 'เมษยน 2559',
     datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
     author: {
-      name: 'Michael Foster',
-      role: 'CFO',
+      name: 'GPA',
+      role: '3.19',
       href: '#',
       imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        'https://upload.wikimedia.org/wikipedia/th/thumb/7/7a/%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%93%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%B3%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B2%E0%B8%A1.svg/230px-%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%93%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%B3%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B2%E0%B8%A1.svg.png',
     },
   },
   // More posts...
